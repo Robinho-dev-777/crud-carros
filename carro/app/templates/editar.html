@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Editar Carro{% endblock %}
+
+{% block content %}
+<h2 class="mb-4 text-center">Editar Carro</h2>
+
+<div class="card bg-secondary p-4">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button class="btn btn-warning mt-3">Atualizar</button>
+        <a href="/" class="btn btn-light mt-3">Cancelar</a>
+    </form>
+</div>
+
+{% endblock %}
